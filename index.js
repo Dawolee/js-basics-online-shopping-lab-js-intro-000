@@ -20,17 +20,17 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-  var current = [];
+  var current = "In your cart, you have ";
   if (!cart.length) {
     console.log("Your shopping cart is empty.");
   }
   else {
     for (let i = 0; i < cart.length; i++) {
       for (var item in cart[i]) {
-        current.push(`${item} at $${cart[i][item]}`);
+        current += `${item} at $${cart[i][item]}`;
       }
     }
-    console.log("In your cart, you have " + current.join(", ") + ".");
+    console.log("In your cart, you have " + current + ".");
   }
 }
 
