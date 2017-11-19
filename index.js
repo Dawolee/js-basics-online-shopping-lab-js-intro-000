@@ -30,7 +30,7 @@ function viewCart() {
         current += `${item} at $${cart[i][item]}`;
       }
     }
-    console.log("In your cart, you have " + current + ".");
+    console.log(`${current}.`);
   }
 }
 
