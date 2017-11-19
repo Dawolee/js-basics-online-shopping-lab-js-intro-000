@@ -34,11 +34,11 @@ function viewCart() {
           current.push(`and ${item} at ${cart[i][item]}.`);
         }
         else {
-          current.push(`${item} at ${cart[i][item]}, `);
+          current.push(`${item} at ${cart[i][item]},`);
         }
       }
     }
-    console.log(current);
+    console.log(`In your cart, you have ${current.join(", ")}`);
   }
 }
 
