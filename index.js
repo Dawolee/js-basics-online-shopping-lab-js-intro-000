@@ -31,7 +31,7 @@ function viewCart() {
           current += `and ${item} at $${cart[i][item]}`;
         }
         else {
-          current += `${item} at $${cart[i][item]},`
+          current += `${item} at $${cart[i][item]},`;
         }
       }
     }
