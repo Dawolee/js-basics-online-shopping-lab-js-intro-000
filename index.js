@@ -38,7 +38,7 @@ function viewCart() {
         }
       }
     }
-    return current;
+    console.log(current);
   }
 }
 
