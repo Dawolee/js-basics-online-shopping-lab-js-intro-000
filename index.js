@@ -30,7 +30,7 @@ function viewCart() {
         if (cart.length === 1) {
           current.push(`${item} at $${cart[i][item]}.`);
         }
-        else if (i === cart.length - 1) {
+        else if (i === cart.length - 1 && cart.length > 1) {
           current.push(`and ${item} at $${cart[i][item]}.`);
         }
         else {
