@@ -35,7 +35,7 @@ function viewCart() {
         }
       }
     }
-    console.log(`In your cart, you have ${current.join(", ")}.`);
+    console.log("In your cart, you have " + current.join(", ") + ".");
   }
 }
 
