@@ -24,6 +24,22 @@ function viewCart() {
   if (!cart.length) {
     console.log("Your shopping cart is empty.");
   }
+  else {
+    for (let i = 0; i < cart.length; i++) {
+      for (var item in cart[i]) {
+        if (cart.length === 1) {
+          current.push(`${item} at ${cart[i][item]}.`);
+        }
+        else if (i > 0 && i === cart.length - 1) {
+          current.push(`and ${item} at ${cart[i][item]}.`);
+        }
+        else {
+          current.push(`${item} at ${cart[i][item]}, `);
+        }
+      }
+    }
+    return current;
+  }
 }
 
 function total() {
