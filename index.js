@@ -28,13 +28,13 @@ function viewCart() {
     for (let i = 0; i < cart.length; i++) {
       for (var item in cart[i]) {
         if (cart.length === 1) {
-          current.push(`${item} at ${cart[i][item]}.`);
+          current.push(`${item} at $${cart[i][item]}.`);
         }
         else if (i > 0 && i === cart.length - 1) {
-          current.push(`and ${item} at ${cart[i][item]}.`);
+          current.push(`and ${item} at $${cart[i][item]}.`);
         }
         else {
-          current.push(`${item} at ${cart[i][item]},`);
+          current.push(`${item} at $${cart[i][item]},`);
         }
       }
     }
