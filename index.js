@@ -20,22 +20,22 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-  var current = "In your cart, you have ";
+  var current = [];
   if (!cart.length) {
     console.log("Your shopping cart is empty.");
   }
   else {
     for (let i = 0; i < cart.length; i++) {
       for (var item in cart[i]) {
-        if (i > 0 && i === cart.length - 1) {
-          current += `and ${item} at $${cart[i][item]}`;
+        if (cart.length > 1 && i === cart.length) {
+          current.push(`and ${item} at $${cart[i][item]}`);
         }
         else {
-          current += `${item} at $${cart[i][item]},`;
+          current.push(`${item} at $${cart[i][item]}`);
         }
       }
     }
-    console.log(`${current}.`);
+    console.log("In your cart, you have " + current.join(", ") + ".");
   }
 }
 
