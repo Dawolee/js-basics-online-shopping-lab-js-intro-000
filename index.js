@@ -27,18 +27,15 @@ function viewCart() {
   else {
     for (let i = 0; i < cart.length; i++) {
       for (var item in cart[i]) {
-        if (cart.length === 1) {
-          current.push(`${item} at $${cart[i][item]}.`);
-        }
-        else if (i === cart.length - 1 && cart.length > 1) {
-          current.push(`and ${item} at $${cart[i][item]}.`);
+        if (cart.length > 1 && i === cart.length) {
+          current.push(`and ${item} at $${cart[i][item]}`);
         }
         else {
-          current.push(`${item} at $${cart[i][item]},`);
+          current.push(`${item} at $${cart[i][item]}`);
         }
       }
     }
-    console.log(`In your cart, you have ${current.join(", ")}`);
+    console.log(`In your cart, you have ${current.join(", ")}.`);
   }
 }
 
