@@ -27,12 +27,7 @@ function viewCart() {
   else {
     for (let i = 0; i < cart.length; i++) {
       for (var item in cart[i]) {
-        if (cart.length > 1 && i === cart.length) {
-          current.push(`and ${item} at $${cart[i][item]}`);
-        }
-        else {
-          current.push(`${item} at $${cart[i][item]}`);
-        }
+        current.push(`${item} at $${cart[i][item]}`);
       }
     }
     console.log("In your cart, you have " + current.join(", ") + ".");
